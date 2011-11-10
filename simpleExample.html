@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple AMD</title>
+</head>
+<body>
+	<div class="content">
+		<h1>AMD + Dojo</h1>
+		<p id="about">
+			<img id="avatar"/>Greetings <span id="greeting">...</span>
+		</p>
+
+<script src="http://localhost/sandbox/require.js"></script>
+<script>
+	require([
+		// the modules we want to use
+		'lib/greeting', 
+		'lib/dom'
+	], function(demo, dom){
+		
+		// use the byId method from our dom module
+		var greetingNode = dom.byId('greeting')
+
+		// use the 'hello' method on our demo module
+		greetingNode.innerHTML = demo.hello();
+		
+});
+</script>
+</body>
+</html>
