@@ -41,16 +41,16 @@
 			<img id="avatar"/>Greetings <span id="greeting">...</span>
 		</p>
 
-		<script src="http://localhost/sandbox/require.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js"></script>
 		<script>
 			require({
 				// configure our AMD loader
 				baseUrl: './lib',
 				paths: {
 					// package mappings
-					dojo: 'http://localhost/dojobox/trunk/dojo',
-					dojox: 'http://localhost/dojobox/trunk/dojox',
-					img: '/img'
+					dojo: 'http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dojo',
+					dojox: 'http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dojox',
+					img: location.pathname.replace(/\/[\w.]+$/, '/img')
 				}
 			}, [
 				// the modules we want to use
